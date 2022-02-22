@@ -1,0 +1,131 @@
+Nav {
+	top: 0px;
+	width: 100%;
+	position: fixed;
+	background-color: var(--green);
+	z-index: 1;
+}
+
+Footer {
+	position: absolute;
+	bottom: 0;
+	color: white;
+	width: 100%;
+	height: 60px;
+	background-color: var(--green);
+	z-index: 1;
+}
+
+.navWrapper {
+	width: 90%;
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+	max-width: 1000px;
+	justify-content: space-between;
+}
+
+.collapsedUI {
+	display: none;
+}
+
+.navContent {
+	display: flex;
+	gap: 1px;
+	font-size: 11px;
+	width: fit-content;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.navContent ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.navContent li {
+	padding: 10px;
+	list-style-type: none;
+}
+
+Nav a {
+	letter-spacing: 2px;
+	color: var(--white);
+	padding: 5px 0 5px 0;
+	text-decoration: none;
+	letter-spacing: 5px;
+}
+
+Nav a:hover {
+	color: var(--white);
+	text-shadow:0px 0px 1px var(--white);
+}
+
+Footer a {
+	letter-spacing: 2px;
+	color: var(--white);
+	padding: 5px 0 5px 0;
+	text-decoration: none;
+}
+
+Footer a:hover {
+	color: var(--white);
+	text-shadow:0px 0px 1px var(--white);
+}
+
+.active {
+	color: var(--white);
+	text-shadow:0px 0px 3px var(--white);
+}
+
+
+/*Phone Styles */
+@media screen and (max-width: 767px) {
+.collapsedUI {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+Nav .navWrapper {
+	height: fit-content;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#brandLogo {
+	display: none;
+}
+
+.navContent {
+	display: none; 
+}
+
+.navContentShow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+Nav .navContent ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;
+}
+
+.hamburger {
+	border: none;
+	background-color: transparent;
+	padding-right: 15px;
+}
+
+Footer .navContent {
+	display: flex;
+	color: white;
+}
+
+}
